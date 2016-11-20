@@ -95,9 +95,6 @@ int load_rom(char *filename)
         fclose(fd);
     }
 
-    /* Don't load games smaller than 16K 
-    if(size < 0x4000) return 0;*/
-
     /* Take care of image header, if present */
     if((size / 512) & 1)
     {
@@ -123,8 +120,7 @@ int load_rom(char *filename)
         {
             juegopal=1;
             cart.mapper     = game_list[i].mapper;
-           // sms.display     = game_list[i].display;
-          // sms.territory   = game_list[i].territory;
+
         }
     }
     
