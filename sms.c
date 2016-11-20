@@ -47,24 +47,26 @@ void writemem_mapper_codies(int offset, int data)
 
 }
 
+//NOTA:  Mapper Koreano MSX
 
 static void writemem_mapper_korea_msx(int offset, int data)
 {
   if (offset <= 0x0003)
   {
     mapper_8k_w(offset,data);
-    //sms_mapper_w(offset & 3, data);
     return;
   }
   cpu_writemap[offset >> 10][offset & 0x03FF] = data;
 }
+
+
+//NOTA:  Mapper Koreano 
 
 static void writemem_mapper_korea(int offset, int data)
 {
   if (offset == 0xA000)
   {
     mapper_16k_w(3,data);
-    //sms_mapper_w(offset & 3, data);
     return;
   }
   cpu_writemap[offset >> 10][offset & 0x03FF] = data;
