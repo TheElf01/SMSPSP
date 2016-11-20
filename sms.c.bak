@@ -8,7 +8,7 @@
 sms_t sms;
 
 
-/* NOTA: Bios*/
+/* BIOS/CART ROM */
 bios_t bios;
 slot_t slot;
 
@@ -274,8 +274,6 @@ void sms_mapper_w(int address, int data)
             break;
     }
 }
-
-//NOTA:  Agregado mapper 8k y 16k
 
 void mapper_8k_w(int address, int data)
 {

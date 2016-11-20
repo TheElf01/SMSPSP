@@ -54,7 +54,7 @@ void system_frame(int skip_render)
 
     for(vdp.line = 0; vdp.line < lpf;)
     {
-        //NOTA: VDP extendido para PAL
+        
        if (juegopal==1){
         z80_execute(450);}
        if (juegopal==0){
@@ -68,7 +68,7 @@ void system_frame(int skip_render)
             render_line(vdp.line);
         }
         
-        //NOTA: Hack para algunos juegos que requieren de una interrupcion extra al finalizar el render
+        
         if (spidermanhack==1){
         if(vdp.line == 193){
         z80_set_irq_line(0, ASSERT_LINE);}

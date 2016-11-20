@@ -85,7 +85,7 @@ typedef struct
     } device[2];
 } sms_t;
 
-/* NOTA: BIos */
+/* BIOS ROM */
 typedef struct
 {
   uint8 *rom;
@@ -103,9 +103,9 @@ typedef struct
 } slot_t;
 
 typedef struct {
-  uint8 rom[0x2000];  /* bios */
-  uint8 pio_mode;     /* modo PIO */
-  uint8 keypad[2];    /* Input */
+  uint8 rom[0x2000];  /* BIOS ROM */
+  uint8 pio_mode;     /* PIO mode */
+  uint8 keypad[2];    /* Keypad inputs */
 } t_coleco;
 
 /* Global data */

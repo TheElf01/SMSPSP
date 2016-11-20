@@ -128,7 +128,7 @@ uint8 input_r(int offset)
        else{ 
        
      
-             /*NOTA: Simulador de paddle  */
+             /* Fire Button */
         
 
                 

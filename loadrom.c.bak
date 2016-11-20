@@ -5,8 +5,6 @@
 
 #include "shared.h"
 
-//NOTA
-
 char game_name[PATH_MAX];
 int juegopal;
 int vcodies;
@@ -22,8 +20,6 @@ typedef struct {
     int territory;
     char *name;
 } rominfo_t;
-
-//NOTA  Agregados juegos que necesitan de mappers o hacks varios
 
 rominfo_t game_list[] = {
     {0x29822980, MAPPER_CODIES, DISPLAY_PAL, TERRITORY_EXPORT, "Cosmic Spacehead"},
@@ -142,10 +138,9 @@ int load_rom(char *filename)
     paddlec=0; 
     spidermanhack=0;
     
-	//NOTA: Juegos que usan el paddle
-
     if (cart.crc == 0xf9dbb533 || cart.crc == 0xa6fa42d0 || cart.crc == 0x29bc7fad || cart.crc ==  0x315917d4)    
     {paddlec=1;
+    //contador=14;
     }  
     if (cart.crc == 0xebe45388 || cart.crc == 0x2d367c43  || cart.crc == 0xbc240779   || cart.crc == 0x13ac9023)
     {spidermanhack=1;
